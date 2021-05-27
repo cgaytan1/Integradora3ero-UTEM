@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CarxOnline-Login</title>
+	<meta charset="utf-8">
+      <link href="css/Estilos2.css" rel="stylesheet" type="text/css">
+	  <link rel="icon" type="image/.jpg" href="img/icon.png"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src="js/sweetalert2.all.min.js"></script>
+	  <link rel="stylesheet" href="css/sweetalert.css">
+</head>
+<body>
+	<form action="validarlogin.php" method="post">
+		<h2>INICIAR SESIÓN</h2>
+		&#128102; Usuario: <input type="text" name="usuario" placeholder="Usuario">
+		&#128273; Contraseña: <input type="password" name="password" placeholder="Contraseña">
+		<input type="submit" value="Ingresar">
+		<center><p class="link">¿Olvidaste tu contraseña? <a href="login.html">Da click aquí</a></p></center>
+		<center><p style="padding-bottom: 2%;" class="link">¿No tienes cuenta? <a href="registro1.php">Crea una aquí</a></p></center>
+		<a href="index.php"><input type="button" value="Volver a inicio"></a>
+	</form>
+</body>
+</html>

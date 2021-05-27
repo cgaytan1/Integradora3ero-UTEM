@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CarxOnline-Registro</title>
+    <meta charset="utf-8">
+    <link href="css/Estilos.css" rel="stylesheet" type="text/css">
+    <title>CarxOnline</title>
+    <link rel="icon" type="image/.jpg" href="img/icon.png"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="css/Estilos2.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/.jpg" href="img/icon.png"/>
+</head>
+<body>
+	<form action="regprod.php" method="post">
+		<h2>REGISTRAR PRODUCTO</h2>
+        <input type="hidden" name="id_prod" placeholder="ID">
+		<input type="text" name="nombre" required placeholder="Nombre del producto">
+		<select name="categoria" id="categoria" required style="font-size: 100%;">
+                    <option value="" disabled selected >Categoría</option>
+                    <option>Boligrafos</option>
+                    <option>Plumones</option>
+                    <option>Lapices</option>
+                    <option>Crayones</option>
+                    <option>Broches</option>
+                    <option>Clips</option>
+                    <option>Chinches</option>
+                    <option>Engrapadoras</option>
+                    <option>Sujeta</option>
+                    <option>Puntillas</option>
+                    <option>Sellos</option>
+                    <option>Tintas</option>
+                    <option>Borradores</option>
+                    <option>Sacapuntas</option>
+                    <option>Medicion</option>
+                    <option>Libretas</option>
+                    <option>Correctores</option>
+                    <option>Resistol</option>
+                    <option>Tijeras</option>
+                    <option>Pistolas</option>
+                    <option>Silicon</option>
+                    <option>Pinturas</option>
+                    <option>Plastilinas</option>
+        </select>
+		<input type="text" name="dic" required placeholder="Descripción">
+		<input type="text" name="prc" required maxlength="10" placeholder="Precio" onkeypress="return checkIt(event)">
+		<input type="text" name="modelo" placeholder="Modelo">
+		<input type="text" name="cant" placeholder="Cantidad" required onkeypress="return checkIt(event)">
+        <input type="file" name="imagen" id="imagen" accept="image/*">
+
+		<input type="submit" value="Registrar">
+		<a href="modprod.php"><input type="button" value="Volver"></a>
+	</form>
+</body>
+<script>
+        function checkIt(evt){
+            evt = (evt) ? evt : window.event
+                var charCode = (evt.which) ? evt.which : evt.keyCode
+                if (charCode > 31 && (charCode < 45 || charCode > 57)){
+                    status = "ESTE CAMPO SOLO ACEPTA NUMEROS."
+                    return false
+                }
+                status = "" 
+                return true
+            }
+</script>
+</html> 
